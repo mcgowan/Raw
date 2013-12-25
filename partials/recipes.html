@@ -1,0 +1,46 @@
+﻿<div class="contents">
+
+    <h3>SALADS</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Salads'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+    <h3>DRESSINGS</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Dressings'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+    <h3>SHAKES</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Shakes'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+    <h3>SOUPS</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Soups'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+    <h3>ROLLS, WRAPS, NOODLES & PATÉS</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Rolls, Wraps, Noodles & Patés'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+    <h3>DESSERTS & SWEET SNACKS</h3>
+    <ul class="list-unstyled">
+        <li ng-repeat="recipe in recipes | filter: {category: 'Desserts & Sweet Snacks'} | orderBy: 'name'">
+            <span><a ng-click="load(recipe)">{{recipe.name}}</a></span>
+        </li>
+    </ul>
+
+
+</div>

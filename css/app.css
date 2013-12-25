@@ -1,0 +1,34 @@
+body {
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+	cursor: pointer;
+}
+
+.contents {
+  padding: 20px;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//ssl.gstatic.com/fonts/roboto/v9/xZQOmYg4x3YaWkTJi1kErvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//ssl.gstatic.com/fonts/roboto/v9/xypMPkk3qWn0aVtKdo69mQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//ssl.gstatic.com/fonts/roboto/v9/wdhR8z_EejC7uAMUf1gPYgLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}

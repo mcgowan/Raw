@@ -1,0 +1,13 @@
+﻿<div class="contents">
+    <p><a ng-click="recipes()">Recipe Index</a></p>
+    <h2>{{ recipe.name }}</h2>
+    <p class="lead">{{ recipe.phase }}</p>
+    <p>{{ recipe.servings }}</p>
+    <p>{{ recipe.description }}</p>
+	<ul class="list-unstyled">
+        <li ng-repeat="ingredient in recipe.ingredients track by $index">
+            <b><span ng-bind-html="ingredient | unsafe"></span></b>
+        </li>
+	</ul>
+    <p><span ng-bind-html="recipe.directions | unsafe"></span></p>
+</div>

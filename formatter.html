@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ani's 15-day Fat Blast</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+
+<body ng-controller="FormatterCtrl">
+    <div class="contents">
+        <h1>Recipe Formatter</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="contents">
+
+                <h4>SALADS</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Salads'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+                <h4>DRESSINGS</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Dressings'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+                <h4>SHAKES</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Shakes'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+                <h4>SOUPS</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Soups'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+                <h4>ROLLS, WRAPS, NOODLES & PATÉS</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Rolls, Wraps, Noodles & Patés'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+                <h4>DESSERTS & SWEET SNACKS</h4>
+                <ul class="unstyled">
+                    <li ng-repeat="recipe in recipes | filter: {category: 'Desserts & Sweet Snacks'} | orderBy: 'name'">
+                        <span>{{recipe.name}}</span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            <div class="contents">
+                <form role="form">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="15" ng-model="recipe"></textarea>
+                    </div>
+                    <button ng-click="format(1)" class="btn btn-default">Salad</button>
+                    <button ng-click="format(2)" class="btn btn-default">Shake</button>
+                    <button ng-click="format(3)" class="btn btn-default">Soup</button>
+                    <button ng-click="format(4)" class="btn btn-default">Dressing</button>
+                    <button ng-click="format(5)" class="btn btn-default">Rolls, Wraps, Noodles & Patés</button>
+                    <button ng-click="format(6)" class="btn btn-default">Desserts & Sweet Snacks</button>
+                    <button ng-click="clear()" class="btn btn-default">Clear</button>
+                </form>
+            </div>
+            <div class="contents">
+                <div class="form-group">
+                    <textarea class="form-control" rows="15" ng-model="output"></textarea>
+                </div>
+                <div class="form-group">
+                    <button ng-click="add()" class="btn btn-default">Add</button>
+                    <button ng-click="json()" class="btn btn-default">Load JSON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/controllers/formatter.js"></script>
+</body>
+
+</html>

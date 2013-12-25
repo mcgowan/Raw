@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="RawApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ani's 15-day Fat Blast</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainCtrl">
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li ng-class="{'active':isSchedule()}"><a ui-sref="schedule">Schedule</a></li>
+          <li ng-class="{'active':isRecipe() || isRecipes()}"><a ui-sref="recipes">Recipes</a></li>
+        </ul>
+        <h3 class="text-muted">Ani's 15-day Fat Blast</h3>
+      </div>
+      <div class="contents" ui-view>
+      </div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-sanitize.min.js"></script>
+    <script src="lib/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angular-ui/angular-ui-router.min.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/controllers/recipe.js"></script>
+    <script src="js/controllers/recipes.js"></script>
+    <script src="js/controllers/schedule.js"></script>
+  </body>
+</html>
